@@ -1,0 +1,54 @@
+{
+  "name": "Chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "build": "npm run test && NODE_ENV=production webpack",
+    "test": "npm run test:html && npm run test:client",
+    "test:html": "nu-html-checker client/*.html",
+    "test:client": "./node_modules/.bin/eslint client/",
+    "start:webpack": "webpack-dev-server --inline --hot --config ./webpack.config.js",
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CiesielskiK/Chat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CiesielskiK/Chat/issues"
+  },
+  "homepage": "https://github.com/CiesielskiK/Chat#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.18.2",
+    "eslint-plugin-react": "^7.7.0",
+    "html-webpack-plugin": "^3.1.0",
+    "nodemon": "^1.17.2",
+    "nu-html-checker": "^0.1.0",
+    "optimize-js-plugin": "0.0.4",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^3.1.3",
+    "socket.io-client": "^2.0.4",
+    "style-loader": "^0.20.3",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.2"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.0.4"
+  }
+}
